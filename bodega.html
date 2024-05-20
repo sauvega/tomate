@@ -32,129 +32,118 @@
 <div class="container mt-4">
     <h1>Mantenedor de Bodega</h1>
     <br>
-    <form class="row g-3 needs-validation" novalidate>
+    <!-- Se añadió id="bodegaForm" para identificar el formulario -->
+    <form id="bodegaForm" class="row g-3 needs-validation" novalidate>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 
                 <div class="col-sm-12 col-md-4">
                     <div class="mb-3">
-                      <label for="categoria" class="form-label" style="font-weight: bold;">Categoría</label>
-                      
-                    <select class="form-select" id="categoriaProducto">
-                      <option selected>Elige</option>
-                      <option value="perro">Aventuras</option>
-                      <option value="gato">Sci-fi</option>
-                      <option value="gato" >Violencia</option>
-                      <option value="gato">RPG</option>
-                      <option value="gato">Romance and Drama</option>
-                      <option>otros</option>
-                    </select>
-                    
-                  </div>
-                </form>
-                <div class="mb-3">
-                  <label for="categoria" class="form-label" style="font-weight: bold;">Nombre</label>
-                <select class="form-select" id="categoriaProducto">
-                  <option selected>Elige</option>
-                  <option value="perro">Dragon Ball Fighter Z</option>
-                  <option value="gato">Afterimage</option>
-                  <option value="gato">NBA 2K20</option>
-                  <option value="gato">Ghost Recon</option>
-                  <option value="gato">Tekken 8</option>
-                  <option>otros</option>
-                  </select></div>
-                </select>
-                
-                  
-
-                    
-                    <div class="mb-3">
-                        <label for="cantidad" class="form-label" style="font-weight: bold;"
-                        >Cantidad</label>
-                        <input required placeholder="3" 
-                            class="form-control" rows="3"
-                            id="direccion" name="direccion" aria-describedby="direccionHelp">
-                  
+                        <label for="categoria" class="form-label" style="font-weight: bold;">Categoría</label>
+                        <!-- Se corrigió la estructura del select para cerrar correctamente la etiqueta -->
+                        <select class="form-select" id="categoria" name="categoria">
+                            <option selected>Elige</option>
+                            <option value="aventuras">Aventuras</option>
+                            <option value="sci-fi">Sci-fi</option>
+                            <option value="violencia">Violencia</option>
+                            <option value="rpg">RPG</option>
+                            <option value="romance">Romance and Drama</option>
+                            <option value="otros">Otros</option>
+                        </select>
                     </div>
-
-          
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label" style="font-weight: bold;">Nombre</label>
+                        <select class="form-select" id="nombre" name="nombre">
+                            <option selected>Elige</option>
+                            <option value="dbfz">Dragon Ball Fighter Z</option>
+                            <option value="afterimage">Afterimage</option>
+                            <option value="nba2k20">NBA 2K20</option>
+                            <option value="ghostrecon">Ghost Recon</option>
+                            <option value="tekken8">Tekken 8</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cantidad" class="form-label" style="font-weight: bold;">Cantidad</label>
+                        <!-- Se corrigió el name del input de cantidad -->
+                        <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                    </div>
                 </div>
-                
-        <div class="col-sm-12 col-md-4">
+                <div class="col-sm-12 col-md-4">
                     <img class="registro_foto" src="img/dbzFighter copy.png" alt="">
-                    
-                </div> 
+                </div>
             </div>
             <br><br>
             <div class="row">
                 <div class="col text-center">
                     <button type="reset" class="btn btn-primary">Nuevo</button>
-                    <button type="reset" class="btn btn-primary">Agregar</button>
+                    <!-- Se cambió el tipo del botón Agregar a submit -->
+                    <button type="submit" class="btn btn-primary">Agregar</button>
                 </div>
             </div>
         </div>  
-    </form>       
-        
+    </form>
+    
     <table class="table mt-4">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Categoría</th>
-          <th>Nombre</th>
-          <th>Estado</th>
-          <th>Opciones</th>
-        </tr>
-        <tr>
-          <th>11</th>
-          <th>Violencia</th>
-          <th>Dragon Ball Fighter Z</th>
-          <th>En bodega</th>
-          <th><button type="reset" class="btn btn-primary">Eliminar</button></th>
-          
-        </tr>
-        <tr>
-          <th>12</th>
-          <th>Violencia</th>
-          <th>Tekken 8</th>
-          <th>En bodega</th>
-          <th><button type="reset "class="btn btn-primary">Eliminar</button></th>
-          
-        </tr>
-        <tr>
-          <th>13</th>
-          <th>Aventuras</th>
-          <th>Spiderman</th>
-          <th>Vendido</th>
-          <th><button type="reset" class="btn btn-primary">Eliminar</button></th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Categoría</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Opciones</th>
+            </tr>
+            <tr>
+                <th>11</th>
+                <th>Violencia</th>
+                <th>Dragon Ball Fighter Z</th>
+                <th>En bodega</th>
+                <!-- Se cambió el tipo del botón de Eliminar a button -->
+                <th><button type="button" class="btn btn-primary">Eliminar</button></th>
+            </tr>
+            <tr>
+                <th>12</th>
+                <th>Violencia</th>
+                <th>Tekken 8</th>
+                <th>En bodega</th>
+                <!-- Se cambió el tipo del botón de Eliminar a button -->
+                <th><button type="button" class="btn btn-primary">Eliminar</button></th>
+            </tr>
+            <tr>
+                <th>13</th>
+                <th>Aventuras</th>
+                <th>Spiderman</th>
+                <th>Vendido</th>
+                <!-- Se cambió el tipo del botón de Eliminar a button -->
+                <th><button type="button" class="btn btn-primary">Eliminar</button></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
     </table>
-        </div>
-    </div>
-    </div>
-    <br><br>
-    <footer class="mt-auto"> 
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+</div>
+<br><br>
+<footer class="mt-auto"> 
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         WhatsApp +56 9 7291 7353 | Facebook | Instagram<br>
         Dirección: Padre Alonso de Ovalle 1586, Santiago
-      </div>
-    </footer>
+    </div>
+</footer>
+
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+<script src="js/validaBodega.js"></script>
 </body>
 </html>
 
 
-
-
-
-
-<!-- Deseo subscribirme con un aporte de $5.000 mensuales y obtener un 5% de descuento en mis compras. -->
-<!--                     
-                    <div class="col-sm-12 col-md-4">
-                    <img class="registro_foto" src="..." alt="">
-                    <br><br>
-                    <input type="file" class="btn btn-ptimary">
-                </div> -->
+  <!-- Deseo subscribirme con un aporte de $5.000 mensuales y obtener un 5% de descuento en mis compras. -->
+  <!--                     
+                      <div class="col-sm-12 col-md-4">
+                      <img class="registro_foto" src="..." alt="">
+                      <br><br>
+                      <input type="file" class="btn btn-ptimary">
+                  </div> -->
