@@ -1,0 +1,48 @@
+.carousel-container {
+    width: 400px; 
+    margin-left:  70px;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #212529;
+    color: white;
+    
+}
+
+    
+.card-title{
+    font-weight: bold;
+}
+.card-text{
+    color: green;
+    font-weight: bold;
+
+}
+.titulo-ficha{
+    margin-right: 30px;
+    color: aqua;
+
+}
+.small-img {
+    width: 100px; 
+    float: right; 
+    margin-left: 30px; 
+    }
+    #boleta_tabla_estados{
+        margin-left: 1000px;
+    }
+    #boleta_tabla_estados td {
+        
+        padding-right: 20px;
+        text-align: center;
+        font-weight: bold;
+    
+    }
