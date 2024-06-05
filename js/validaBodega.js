@@ -65,19 +65,19 @@ $(document).ready(function() {
         var imagePath;
 
         switch(selectedGame) {
-            case 'dbfz':
+            case '1':
                 imagePath = 'img/dbzFighter copy.png';
                 break;
-            case 'afterimage':
+            case '2':
                 imagePath = 'img/afterimage_icon_by_pronemo_dfwlqbk-375w-2x.png'; 
                 break;
-            case 'nba2k20':
+            case '3':
                 imagePath = 'img/nba2k10inx.png'; 
                 break;
-            case 'ghostrecon':
+            case '4':
                 imagePath = 'img/ghost1.png'; 
                 break;
-            case 'tekken8':
+            case '5':
                 imagePath = 'img/tekken8.png'; 
                 break;
             default:
